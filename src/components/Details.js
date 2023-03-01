@@ -1,7 +1,7 @@
 import '../App.css'
 import { useState } from 'react';
 
-function Details({ uniqueKey, name, price }) {
+function Details({ uniqueKey, name, image, price }) {
 
     let [qty, setQty] = useState(1)
 
@@ -31,9 +31,7 @@ function Details({ uniqueKey, name, price }) {
             items.push(JSON.parse(element[1]))
         });
         
-        let item = JSON.stringify({uniqueKey, name, price, qty})
-        let len = sessionStorage.length
-        // let last = sessionStorage.key(len -1)
+        let item = JSON.stringify({uniqueKey, name, image, price, qty})
 
         if (checkDuplicate()) {
             alert('item already added')
@@ -47,7 +45,10 @@ function Details({ uniqueKey, name, price }) {
 
     return(
         <div className="details">
-            <div className="image">
+            <div className="image" style={{
+                background: "url(" + image + ")",
+                backgroundSize: "cover"
+            }}>
                 
             </div>
             <div className="options">

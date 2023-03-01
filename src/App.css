@@ -6,12 +6,13 @@
 .navbar {
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: black;
-    color: white;
+    background-color: white;
+    /* color: white; */
     position: fixed;
 
     width: 100%;
     /* margin-top: -22px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .navbar p {
@@ -32,7 +33,7 @@
 
 .navbar ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .title {
@@ -213,6 +214,19 @@
 .cartItemDetails h2 {
     color: red;
     font-weight: 200;
+}
+
+.wishlistIcon:hover {
+    cursor: pointer;
+}
+
+.qty button {
+    background-color: black;
+    color: white;
+}
+
+.qty button:hover {
+    cursor: pointer;
 }
 
 .total {

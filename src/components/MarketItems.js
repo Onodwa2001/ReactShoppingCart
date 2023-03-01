@@ -50,9 +50,10 @@ function MarketItems({ items, title }) {
                     {myItems.length === 0 ? notFound : myItems.map((item) => (
                         <div className="item" key={item.key} onClick={() => {setItem(item.key, item.name, item.image, item.price)}}>
                             <div className="image" style={{
-                                background: "url(gorrilla.jpg)"
+                                background: "url(/" + item.image + ")",
+                                backgroundSize: "cover" 
                             }}>
-                            
+                                
                             </div>
                             <h2>{item.name}</h2>
                             <p>Price: <b>R {item.price}</b></p>
@@ -62,7 +63,7 @@ function MarketItems({ items, title }) {
                     ))}
                 </div>
                 <div className="details-wrap">
-                    {key !== 0 ? <Details uniqueKey={key} name={name} price={price} /> : <div>Details will be displayed here</div>}
+                    {key !== 0 ? <Details uniqueKey={key} name={name} image={image} price={price} /> : <div>Details will be displayed here</div>}
                 </div>
             </div>
         
