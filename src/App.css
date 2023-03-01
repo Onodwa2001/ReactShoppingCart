@@ -1,0 +1,238 @@
+.items-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: black;
+    color: white;
+    position: fixed;
+
+    width: 100%;
+    /* margin-top: -22px; */
+}
+
+.navbar p {
+    text-align: center;
+}
+
+.navbar ul {
+    margin: auto auto;
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    /* margin-left: 50px; */
+    height: fit-content;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    
+}
+
+.market .title {
+    text-align: center;
+    padding-top: 80.6px;
+    margin-top: -1px;
+}
+
+.searchBar {
+    padding: 0px 50px 50px;
+    padding-left: 120px;
+}
+
+.searchBar input {
+    padding: 7px;
+}
+
+.searchBar button {
+    padding: 7px;
+    margin-left: 3px;
+    background-color: black;
+    color: white;
+}
+
+.items-available {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    width: 70%;
+    margin: 0 auto 0 auto;
+}
+
+.item {
+    padding: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.item button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 7px 0px;
+}
+
+.item button:hover {
+    opacity: .3;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.item h2 {
+    font-size: 15px;
+}
+
+.item .image {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(43, 93, 93);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.item:hover {
+    transform: scale(1.03);
+    transition: .3s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.image {
+    background-color: rgb(43, 93, 93);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* gap: 20px; */
+    /* padding-right: 170px; */
+    position: fixed;
+    width: 40%;
+    border: solid rgb(201, 200, 200) 1px;
+    border-radius: 8px;
+}
+
+.details .options {
+    min-height: 50vh;
+    padding: 0px 20px;
+}
+
+.details .options .add {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+.increment {
+    display: flex;
+    /* height: 30px; */
+    padding: 10px 0;
+}
+
+
+.increment div {
+    margin: 0px 10px;
+}
+
+.increment button {
+    width: fit-content;
+    background-color: black;
+    color: white;
+}
+
+.increment button:hover {
+    opacity: .3;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+.add:hover {
+    opacity: .3;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.options span {
+    border: solid white 1px;
+    height: fit-content;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+
+.wrap-cart-body {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+
+.CartItems {
+    margin-top: 30px;
+}
+
+.cart-title {
+    padding-top: 50px;
+}
+
+.cartItem {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.cartImage {
+    background-color: rgb(67, 61, 61);
+    min-width: 25%;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.cartItemDetails {
+    min-width: 50%;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.cartItemDetails h2 {
+    color: red;
+    font-weight: 200;
+}
+
+.total {
+    margin-top: 140px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.total button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(35, 163, 35);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.total button:hover {
+    cursor: pointer;
+}
