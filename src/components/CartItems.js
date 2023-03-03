@@ -17,6 +17,11 @@ function CartItems({ totalItems }) {
         window.location.reload(true)
     }
 
+    const formatter = new Intl.NumberFormat('en-ZA', {
+        style: 'currency',
+        currency: 'ZAR',
+    });
+
     // NB!!! DO NOT FORGET TO DELETE TEMP PROPERTY WHEN PLACING ORDER
 
     return(
@@ -30,7 +35,7 @@ function CartItems({ totalItems }) {
                     }}></div>
                     <div className='cartItemDetails'>
                         <h1>{el.name}</h1>
-                        <h2>R {el.price}</h2>
+                        <h2> { formatter.format(el.price) }</h2>
                     </div>
                     <div className='qty'>
                         <h3>Qty: {el.qty}</h3>

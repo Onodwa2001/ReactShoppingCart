@@ -3,7 +3,7 @@ function GrandTotal(props) {
 
     return(
         <div className="grandTotal">
-            <h2>Grand Total <span style={{ color: "red" }}>R {total}</span></h2>
+            <h2>Grand Total <span style={{ color: "red" }}>{total}</span></h2>
             <button>Checkout</button>
         </div>
     )

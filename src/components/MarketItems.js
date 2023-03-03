@@ -40,6 +40,11 @@ function MarketItems({ items, title }) {
         }
     }
 
+    const formatter = new Intl.NumberFormat('en-ZA', {
+        style: 'currency',
+        currency: 'ZAR',
+    });
+
     return(
         <div className="market">
             <h1 className="title">{title}</h1>
@@ -53,10 +58,10 @@ function MarketItems({ items, title }) {
                                 background: "url(/" + item.image + ")",
                                 backgroundSize: "cover" 
                             }}>
-                                
+                            
                             </div>
                             <h2>{item.name}</h2>
-                            <p>Price: <b>R {item.price}</b></p>
+                            <p>Price: <b>{formatter.format(item.price)}</b></p>
                             <p>Available: {item.available ? 'Yes' : 'No'}</p>
                             {/* <button>Select Item</button> */}
                         </div>

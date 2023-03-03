@@ -43,6 +43,11 @@ function Details({ uniqueKey, name, image, price }) {
         
     }
 
+    const formatter = new Intl.NumberFormat('en-ZA', {
+        style: 'currency',
+        currency: 'ZAR',
+    });
+
     return(
         <div className="details">
             <div className="image" style={{
@@ -53,7 +58,7 @@ function Details({ uniqueKey, name, image, price }) {
             </div>
             <div className="options">
                 <h1>{ name }</h1>
-                <p>Price: R { price }</p>
+                <p>Price: { formatter.format(price) }</p>
                 <div className="increment">
                     <button className="minus" onClick={decrement}>-</button>
                     <div>{ qty }</div>

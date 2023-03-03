@@ -17,6 +17,11 @@ function Cart() {
         let obj = JSON.parse(element[1])
         grandTotalPrice += obj.price * obj.qty;
     });
+
+    const formatter = new Intl.NumberFormat('en-ZA', {
+        style: 'currency',
+        currency: 'ZAR',
+    });
     
     return(
         <div className="cart">
@@ -24,10 +29,10 @@ function Cart() {
             
             <div className='wrap-cart-body'>
                 <div className='cartItems'>
-                    <CartItems totalItems={totalNumberOfItems} />
+                    <CartItems totalItems={ totalNumberOfItems } />
                 </div>
                 <div className='orderConfirmation'>
-                    <OrderConfirmation total={grandTotalPrice} />
+                    <OrderConfirmation total={ formatter.format(grandTotalPrice) } />
                 </div>
             </div>
         </div>
